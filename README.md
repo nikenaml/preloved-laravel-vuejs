@@ -7,4 +7,6 @@ An application project built using the Laravel programming language as the backe
 
 Feel free to ask me if you have any problem, visit me in my instagram account : @niken.aml
 
+Thank you and enjoy ^ _ ^
+
 -> Allbrands Preloved -> SmartWeb Exhibition 2020 of Mercu Buana University
