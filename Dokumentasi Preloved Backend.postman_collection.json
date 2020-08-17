@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "77057698-7d99-4ac2-9ed8-c1a2b5ead66f",
+		"name": "Dokumentasi Preloved Backend",
+		"description": "Dokumentasi API untuk Frontend Website Preloved di Kelas Laravel VueJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produk",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products?id=1&limit=10&name=Sabyan Plisket&slug=sabyan-plisket&type=Baju&price_from=1&price_to=100&page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "name",
+							"value": "Sabyan Plisket"
+						},
+						{
+							"key": "slug",
+							"value": "sabyan-plisket"
+						},
+						{
+							"key": "type",
+							"value": "Baju"
+						},
+						{
+							"key": "price_from",
+							"value": "1"
+						},
+						{
+							"key": "price_to",
+							"value": "100"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Mengambil data produk dari preloved backend."
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Miskah Alfiyyah Kulsum\",\n\t\"email\": \"miskah@gmail.com\",\n\t\"number\": \"081212327128\",\n\t\"address\": \"Jakarta Timur\",\n\t\"transaction_total\": 153000,\n\t\"transaction_status\": \"PENDING\",\n\t\"transaction_details\": [1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/checkout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkout"
+					]
+				},
+				"description": "Melakukan proses checkout dari preloved backend."
+			},
+			"response": []
+		},
+		{
+			"name": "Transaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"3"
+					]
+				},
+				"description": "Mengambil data transaksi berdasarkan ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Guestbook",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nama_tamu\": \"Nita Komalasari\",\n\t\"email_tamu\": \"miskahsi@gmail.com\",\n\t\"asal_tamu\": \"SI 2018\",\n\t\"nohp_tamu\": \"085510069500\",\n\t\"komentar_tamu\": \"percobaan\",\n\t\"nilai_tamu\": \"90\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/guestbook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"guestbook"
+					]
+				},
+				"description": "Mengambil data buku tamu dari preloved-vue"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriber",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama_berlangganan\": \"Naufal Bagaskara\",\r\n\t\"email_berlangganan\": \"opangsquad@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/subscriber",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"subscriber"
+					]
+				},
+				"description": "Membuat isian subscriber dari input email yang ada di bagian footer"
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama_transfer\": \"Ananda Citra\",\r\n\t\"email_transfer\": \"anandacitra@gmail.com\",\r\n\t\"tgl_transfer\": \"13 Juni 2020\",\r\n\t\"bank_customer\": \"Mandiri\",\r\n\t\"no_rek_customer\": \"0700000899992\",\r\n\t\"total_bayar\": \"127.000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transfer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transfer"
+					]
+				},
+				"description": "Untuk membuat data transfer upload bukti transfer"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
